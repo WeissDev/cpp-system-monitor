@@ -260,7 +260,7 @@ string ProcessParser::getOSName() {
     ifstream stream;
     Util::getStream("/etc/os-release", stream);
 
-    string name = "PRETTY NAME=";
+    string name = "PRETTY_NAME=";
     string line;
     while (getline(stream, line)) {
         if (line.compare(0, name.size(), name) == 0) {
